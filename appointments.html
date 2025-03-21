@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments - Healthcare Appointments</title>
+    <link rel="stylesheet" href="appointments.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="doctors.html">Doctors</a></li>
+                <li><a href="appointments.html">Appointments</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="appointments">
+        <h2>Book Your Appointment</h2>
+        <form id="appointment-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="doctor">Choose Doctor</label>
+            <select id="doctor" name="doctor" required>
+                <option value="Dr. John Smith">Dr. John Smith</option>
+                <option value="Dr. Emily Johnson">Dr. Emily Johnson</option>
+                <option value="Dr. Michael Lee">Dr. Michael Lee</option>
+            </select>
+
+            <label for="date">Select Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit">Book Appointment</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Healthcare Appointments</p>
+    </footer>
+
+    <script>
+        document.getElementById("appointment-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            alert("Appointment booked successfully!");
+        });
+    </script>
+</body>
+</html>
